@@ -1,0 +1,48 @@
+#holder {
+  align-items: center;
+  border: 5px dashed tomato;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 200px;
+}
+
+#holder img {
+  width: 250px;
+}
+
+.input--open {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.input--open label {
+  background-color: tomato;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.input--open input {
+  display: none;
+}
+
+.zoom {
+  margin-top: 25px;
+}
+
+.zoom__box {
+  height: 150px;
+  margin: 0 auto;
+  width: 300px;
+  overflow: hidden;
+}
+
+.zoom__box img {
+  width: 300px;
+}
