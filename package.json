@@ -1,0 +1,41 @@
+{
+  "name": "zoomeme",
+  "version": "1.0.0",
+  "description": "Create a Zoom In Meme",
+  "main": "index.html",
+  "scripts": {
+    "postinstall": "node_modules/.bin/jspm install",
+    "start": "node_modules/.bin/live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirLisko/zoomeme.git"
+  },
+  "author": {
+    "name": "Luca Lischetti",
+    "email": "sirlisko@gmail.com",
+    "url": "http://sirlisko.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirLisko/zoomeme/issues"
+  },
+  "homepage": "https://github.com/sirLisko/zoomeme#readme",
+  "jspm": {
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "dependencies": {
+    "jspm": "^0.16.34"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "live-server": "^1.0.0"
+  }
+}

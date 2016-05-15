@@ -8,10 +8,17 @@
 </head>
 <body>
   <article>
-    <div id="holder">Drop and Image!</div>
+    <label id="holder" class="dropper">
+      <span>Drop and Image!</span>
+      <input type="file">
+    </label>
     <div class="zoom"></div>
-    <p id="upload" class="input--open"><label>Open Image<input type="file"></label></p>
   </article>
-  <script src="js/main.js"></script>
+
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import('js/main.js');
+  </script>
 </body>
 </html>

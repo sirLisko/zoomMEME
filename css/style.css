@@ -1,6 +1,7 @@
-#holder {
+.dropper {
   align-items: center;
   border: 5px dashed tomato;
+  cursor: pointer;
   display: flex;
   height: 200px;
   justify-content: center;
@@ -9,26 +10,7 @@
   width: 200px;
 }
 
-#holder img {
-  width: 250px;
-}
-
-.input--open {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.input--open label {
-  background-color: tomato;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  letter-spacing: 1px;
-  padding: 20px;
-  text-transform: uppercase;
-}
-
-.input--open input {
+.dropper input {
   display: none;
 }
 
