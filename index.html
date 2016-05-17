@@ -7,12 +7,34 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <article>
-    <label id="holder" class="dropper">
-      <span>Drop and Image!</span>
-      <input type="file">
-    </label>
-    <div class="zoom"></div>
+  <label id="holder" class="dropper">
+    <span>Drop and Image!</span>
+    <input type="file">
+  </label>
+
+  <article class="zoom" hidden>
+    <ul class="zoom__box">
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+    </ul>
   </article>
 
   <script src="jspm_packages/system.js"></script>

@@ -13,6 +13,7 @@ export default new Promise((resolve, reject) => {
 
     if (images.length) {
       resolve(images);
+      holder.setAttribute('hidden', 'hidden');
     } else {
       reject('Format not supported.');
     }

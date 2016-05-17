@@ -1,9 +1,10 @@
 export default function (image) {
-  const zoom = document.querySelector('.zoom');
+  const zoomBox = document.querySelectorAll('.zoom__box p');
 
-  zoom.insertAdjacentHTML('beforeend',
-    `<p class="zoom__box zoom__box--1">${image.cloneNode(true).outerHTML}</p>
-    <p class="zoom__box zoom__box--2">${image.cloneNode(true).outerHTML}</p>
-    <p class="zoom__box zoom__box--3">${image.cloneNode(true).outerHTML}</p>
-    <p class="zoom__box zoom__box--4">${image.cloneNode(true).outerHTML}</p>`);
+  Array.prototype.forEach.call(zoomBox, box => {
+    box.appendChild(image.cloneNode(true));
+  });
+
+  const zoom = document.querySelector('.zoom');
+  zoom.removeAttribute('hidden');
 }
