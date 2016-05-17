@@ -4,6 +4,7 @@
   "description": "Create a Zoom In Meme",
   "main": "index.html",
   "scripts": {
+    "build": "make",
     "postinstall": "node_modules/.bin/jspm install",
     "start": "node_modules/.bin/live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,7 +34,11 @@
     }
   },
   "dependencies": {
-    "jspm": "^0.16.34"
+    "clean-css": "^3.4.12",
+    "html-dist": "^0.1.0",
+    "jspm": "^0.16.34",
+    "uglify": "^0.1.5",
+    "uglifyjs": "^2.4.10"
   },
   "devDependencies": {
     "eslint": "^2.10.1",
