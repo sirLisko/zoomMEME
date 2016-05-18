@@ -72,3 +72,15 @@ li {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+.zoom__save {
+  background: tomato;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: 'verdana';
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 15px 20px;
+}
