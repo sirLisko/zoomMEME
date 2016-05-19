@@ -41,8 +41,10 @@
     "uglifyjs": "^2.4.10"
   },
   "devDependencies": {
-    "eslint": "^2.10.1",
-    "eslint-config-airbnb": "^9.0.1",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-import-resolver-jspm": "^2.1.0",
+    "eslint-plugin-import": "^1.8.0",
     "live-server": "^1.0.0"
   }
 }

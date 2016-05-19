@@ -1,4 +1,14 @@
 {
-    "extends": "airbnb",
-    "installedESLint": true
+  "extends": "airbnb-base",
+  "plugins": [
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "jspm": {
+        "moduleDirectory": "jspm_packages"
+      },
+      "node": true
+    }
+  }
 }
