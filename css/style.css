@@ -1,6 +1,6 @@
 /* Reset */
 * { box-sizing: border-box }
-ul {
+body, ul {
   margin: 0;
   padding: 0;
 }
@@ -11,16 +11,46 @@ li {
   display: none !important;
 }
 
+body {
+  background-color: #052F5F;
+  color: #F1A208;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Comfortaa', cursive;
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Chango', cursive;
+  font-size: 50px;
+  margin: 30px 0 0;
+  text-align: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+
 .dropper {
   align-items: center;
-  border: 5px dashed tomato;
+  border: 5px dashed #06A77D;
   cursor: pointer;
   display: flex;
-  height: 200px;
+  flex-direction: column;
+  font-size: 25px;
+  height: 300px;
   justify-content: center;
+  line-height: 50px;
   margin: 0 auto;
   overflow: hidden;
-  width: 200px;
+  width: 300px;
+}
+.dropper:hover {
+  border-color: currentColor;
 }
 
 .dropper input {
@@ -36,8 +66,7 @@ li {
 
 .zoom__ctrl {
   cursor: pointer;
-  color: tomato;
-  display: none;
+  color: #06A77D;
   font-size: 100px;
   text-align: center;
   width: 100px;
@@ -47,8 +76,11 @@ li {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-.zoom__box li:hover .zoom__ctrl {
-  display: block;
+.zoom__ctrl:hover {
+  color: currentColor;
+}
+.zoom__box--save .zoom__ctrl {
+  display: none;
 }
 
 .zoom__box li {
@@ -74,13 +106,36 @@ li {
 }
 
 .zoom__save {
-  background: tomato;
+  background-color: #06A77D;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: #052F5F;
   cursor: pointer;
   font-family: 'verdana';
   font-size: 20px;
   margin-top: 30px;
   padding: 15px 20px;
+}
+.zoom__save:hover {
+  background-color: #F1A208;
+  color: #052F5F;
+}
+
+footer {
+	background-color: #005377;
+	font-size: 14px;
+}
+footer	p {
+	line-height: 1.5;
+	text-align: center;
+}
+footer a {
+	color: #D5C67A;
+	text-decoration: none;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer span {
+	white-space: nowrap;
 }

@@ -4,40 +4,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zoom Meme</title>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700|Chango' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <label id="holder" class="dropper">
-    <span>Drop and Image!</span>
-    <input type="file">
-  </label>
-
-  <article class="zoom" hidden>
-    <ul class="zoom__box">
-      <li>
-        <span class="zoom__ctrl zoom__ctrl--out">-</span>
-        <p></p>
-        <span class="zoom__ctrl zoom__ctrl--in">+</span>
-      </li>
-      <li>
-        <span class="zoom__ctrl zoom__ctrl--out">-</span>
-        <p></p>
-        <span class="zoom__ctrl zoom__ctrl--in">+</span>
-      </li>
-      <li>
-        <span class="zoom__ctrl zoom__ctrl--out">-</span>
-        <p></p>
-        <span class="zoom__ctrl zoom__ctrl--in">+</span>
-      </li>
-      <li>
-        <span class="zoom__ctrl zoom__ctrl--out">-</span>
-        <p></p>
-        <span class="zoom__ctrl zoom__ctrl--in">+</span>
-      </li>
-    </ul>
-    <a class="zoom__save">Save Image</a>
-  </article>
-
+  <h1>ZoomME.ME</h1>
+  <main>
+    <label id="holder" class="dropper">
+      <span>Click here</span>
+      <span>or</span>
+      <span>Drop an Image!</span>
+      <input type="file">
+    </label>
+    <article class="zoom" hidden>
+      <ul class="zoom__box">
+        <li>
+          <span class="zoom__ctrl zoom__ctrl--out">-</span>
+          <p></p>
+          <span class="zoom__ctrl zoom__ctrl--in">+</span>
+        </li>
+        <li>
+          <span class="zoom__ctrl zoom__ctrl--out">-</span>
+          <p></p>
+          <span class="zoom__ctrl zoom__ctrl--in">+</span>
+        </li>
+        <li>
+          <span class="zoom__ctrl zoom__ctrl--out">-</span>
+          <p></p>
+          <span class="zoom__ctrl zoom__ctrl--in">+</span>
+        </li>
+        <li>
+          <span class="zoom__ctrl zoom__ctrl--out">-</span>
+          <p></p>
+          <span class="zoom__ctrl zoom__ctrl--in">+</span>
+        </li>
+      </ul>
+      <a class="zoom__save">Save Image</a>
+    </article>
+  </main>
+  <footer>
+    <p>
+      <span>Created with ♥ by <a href="http://sirlisko.com">Luca Lischetti</a> (<a href="http://twitter.com/sirLisko">@sirLisko</a>).</span>
+      <span>Inspired by <a href="https://twitter.com/GianlucaMezzo">GianlucaMezzo</a> :-)</span>
+      <span>View project source on <a href="https://github.com/sirLisko/zoommeme">Github</a>.</span>
+    </p>
+  </footer>
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
   <script>
