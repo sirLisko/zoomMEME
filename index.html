@@ -8,40 +8,43 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <h1>ZoomME.ME</h1>
-  <main>
-    <label id="holder" class="dropper">
+  <header>
+    <h1>ZoomME.ME</h1>
+    <p>Super simple zoom-in meme generator.</p>
+  </header>
+  <div class="dropper">
+    <label id="holder">
       <span>Click here</span>
       <span>or</span>
       <span>Drop an Image!</span>
       <input type="file">
     </label>
-    <article class="zoom" hidden>
-      <ul class="zoom__box">
-        <li>
-          <span class="zoom__ctrl zoom__ctrl--out">-</span>
-          <p></p>
-          <span class="zoom__ctrl zoom__ctrl--in">+</span>
-        </li>
-        <li>
-          <span class="zoom__ctrl zoom__ctrl--out">-</span>
-          <p></p>
-          <span class="zoom__ctrl zoom__ctrl--in">+</span>
-        </li>
-        <li>
-          <span class="zoom__ctrl zoom__ctrl--out">-</span>
-          <p></p>
-          <span class="zoom__ctrl zoom__ctrl--in">+</span>
-        </li>
-        <li>
-          <span class="zoom__ctrl zoom__ctrl--out">-</span>
-          <p></p>
-          <span class="zoom__ctrl zoom__ctrl--in">+</span>
-        </li>
-      </ul>
-      <a class="zoom__save">Save Image</a>
-    </article>
-  </main>
+  </div>
+  <article class="zoom" hidden>
+    <ul class="zoom__box">
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+      <li>
+        <span class="zoom__ctrl zoom__ctrl--out">-</span>
+        <p></p>
+        <span class="zoom__ctrl zoom__ctrl--in">+</span>
+      </li>
+    </ul>
+    <a class="zoom__save">Save Image</a>
+  </article>
   <footer>
     <p>
       <span>Created with ♥ by <a href="http://sirlisko.com">Luca Lischetti</a> (<a href="http://twitter.com/sirLisko">@sirLisko</a>).</span>

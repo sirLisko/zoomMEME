@@ -23,19 +23,25 @@ body {
 h1 {
   font-family: 'Chango', cursive;
   font-size: 50px;
-  margin: 30px 0 0;
+  margin: 25px 0 0;
   text-align: center;
 }
 
-main {
+header p {
+  margin: 15px 0 0;
+  text-align: center;
+}
+
+.dropper,
+.zoom {
   align-items: center;
   display: flex;
   flex: 1;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
-
-.dropper {
+.dropper label {
   align-items: center;
   border: 5px dashed #06A77D;
   cursor: pointer;
@@ -49,10 +55,9 @@ main {
   overflow: hidden;
   width: 300px;
 }
-.dropper:hover {
+.dropper label:hover {
   border-color: currentColor;
 }
-
 .dropper input {
   display: none;
 }
@@ -61,7 +66,7 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
+  min-height: 820px;
 }
 
 .zoom__ctrl {
@@ -94,6 +99,9 @@ main {
   overflow: hidden;
   width: 300px;
 }
+.zoom__box p:hover {
+  outline: 1px solid;
+}
 .zoom__box img {
   cursor: move;
   width: 300px;
@@ -123,7 +131,10 @@ main {
 
 footer {
 	background-color: #005377;
+  bottom: 0;
 	font-size: 14px;
+  position: fixed;
+  width: 100%;
 }
 footer	p {
 	line-height: 1.5;

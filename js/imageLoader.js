@@ -13,7 +13,7 @@ export default new Promise((resolve, reject) => {
 
     if (images.length) {
       resolve(images);
-      holder.setAttribute('hidden', 'hidden');
+      document.querySelector('.dropper').setAttribute('hidden', 'hidden');
     } else {
       reject('Format not supported.');
     }
