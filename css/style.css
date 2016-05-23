@@ -11,6 +11,14 @@ li {
   display: none !important;
 }
 
+.mobile {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 body {
   background-color: #052F5F;
   color: #F1A208;
@@ -22,9 +30,15 @@ body {
 
 h1 {
   font-family: 'Chango', cursive;
-  font-size: 50px;
-  margin: 25px 0 0;
+  font-size: 30px;
+  margin: 10px 0 0;
   text-align: center;
+}
+@media (min-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 25px;
+  }
 }
 
 header p {
@@ -38,22 +52,33 @@ header p {
   display: flex;
   flex: 1;
   justify-content: center;
-  padding-bottom: 50px;
 }
-
+@media (min-width: 500px) {
+  .dropper,
+  .zoom {
+    padding-bottom: 50px;
+  }
+}
 .dropper label {
   align-items: center;
   border: 5px dashed #06A77D;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  font-size: 25px;
-  height: 300px;
+  font-size: 20px;
+  height: 175px;
   justify-content: center;
   line-height: 50px;
   margin: 0 auto;
   overflow: hidden;
-  width: 300px;
+  width: 175px;
+}
+@media (min-width: 500px) {
+  .dropper label {
+    font-size: 25px;
+    height: 300px;
+    width: 300px;
+  }
 }
 .dropper label:hover {
   border-color: currentColor;
@@ -66,20 +91,31 @@ header p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 820px;
+  min-height: 700px;
+}
+@media (min-width: 500px) {
+  .zoom {
+    min-height: 820px;
+  }
 }
 
 .zoom__ctrl {
   cursor: pointer;
   color: #06A77D;
-  font-size: 100px;
+  font-size: 70px;
   text-align: center;
-  width: 100px;
+  width: 50px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+@media (min-width: 500px) {
+  .zoom__ctrl {
+    font-size: 100px;
+    width: 100px;
+  }
 }
 .zoom__ctrl:hover {
   color: currentColor;
@@ -89,18 +125,29 @@ header p {
 }
 
 .zoom__box li {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
+  position: relative;
 }
 .zoom__box p {
-  height: 150px;
+  height: 100px;
   margin: 0;
   overflow: hidden;
-  width: 300px;
+  width: 200px;
 }
+@media (min-width: 500px) {
+  .zoom__box p {
+    height: 150px;
+    width: 300px;
+  }
+}
+
 .zoom__box p:hover {
   outline: 1px solid;
+}
+.mobile .zoom__box p {
+  outline: none;
 }
 .zoom__box img {
   cursor: move;
@@ -131,10 +178,14 @@ header p {
 
 footer {
 	background-color: #005377;
-  bottom: 0;
 	font-size: 14px;
-  position: fixed;
   width: 100%;
+}
+@media (min-width: 500px) {
+  footer {
+    bottom: 0;
+    position: fixed;
+  }
 }
 footer	p {
 	line-height: 1.5;
