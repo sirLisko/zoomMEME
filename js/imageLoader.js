@@ -1,28 +1,28 @@
-const holder = document.getElementById('holder');
+const holder = document.getElementById('holder')
 
-holder.ondragover = () => false;
-holder.ondragend = () => false;
+holder.ondragover = () => false
+holder.ondragend = () => false
 
-function checkFiles(files) {
-  return Array.from(files).filter(file => /image/.exec(file.type));
+function checkFiles (files) {
+  return Array.from(files).filter(file => /image/.exec(file.type))
 }
 
 export default new Promise((resolve, reject) => {
-  function readfiles(files) {
-    const images = checkFiles(files);
+  function readfiles (files) {
+    const images = checkFiles(files)
 
     if (images.length) {
-      resolve(images);
-      document.querySelector('.dropper').setAttribute('hidden', 'hidden');
+      resolve(images)
+      document.querySelector('.dropper').setAttribute('hidden', 'hidden')
     } else {
-      reject('Format not supported.');
+      reject('Format not supported.')
     }
   }
 
   holder.ondrop = e => {
-    e.preventDefault();
-    readfiles(e.dataTransfer.files);
-  };
+    e.preventDefault()
+    readfiles(e.dataTransfer.files)
+  }
 
-  holder.querySelector('input').onchange = e => readfiles(e.target.files);
-});
+  holder.querySelector('input').onchange = e => readfiles(e.target.files)
+})
