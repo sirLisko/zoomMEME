@@ -4,7 +4,7 @@ const eventsMap = {
 }
 
 function eventsPerDevice () {
-  return typeof window.orientation !== undefined ? eventsMap.mobile : eventsMap.desktop
+  return typeof window.orientation !== 'undefined' ? eventsMap.mobile : eventsMap.desktop
 }
 
 function moveImg (evt) {

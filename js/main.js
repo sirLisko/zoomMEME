@@ -6,7 +6,7 @@ import imageRender from './imageRender'
 import imageSaver from './imageSaver'
 import imageZoom from './imageZoom'
 
-if (typeof window.orientation !== undefined) {
+if (typeof window.orientation !== 'undefined') {
   document.body.classList.add('mobile')
 }
 
