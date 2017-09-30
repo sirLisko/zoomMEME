@@ -23,6 +23,7 @@ function imagePosition () {
   const events = eventsPerDevice()
   const img = document.querySelector('.zoom__box')
   img[events.start] = e => {
+    e.preventDefault()
     if (e.target.nodeName !== 'IMG') return
 
     document[events.end] = () => { document[events.move] = null }
