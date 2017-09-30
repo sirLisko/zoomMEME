@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build": "make",
-    "postinstall": "node_modules/.bin/jspm install",
-    "start": "node_modules/.bin/live-server",
+    "postinstall": "jspm install",
+    "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
