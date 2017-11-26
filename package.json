@@ -24,11 +24,11 @@
   },
   "homepage": "https://github.com/sirLisko/zoomeme#readme",
   "dependencies": {
-    "clean-css": "^3.4.12",
-    "html-dist": "^0.1.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "clean-css-cli": "^4.1.10",
+    "html-minifier": "^3.5.7",
     "html2canvas": "^0.5.0-beta4",
     "webpack": "^3.8.1"
   },
