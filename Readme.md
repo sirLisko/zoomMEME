@@ -1,27 +1,30 @@
-# ZoomMeme
+# ZoomMEME 👀
 
-### Check me out @ [http://zoomme.me/](http://zoomme.me/)
+> [https://zoomme.me](https://zoomme.me) - Super simple zoom meme generator.
 
-### Build
+![image](example.jpeg)
+
+## Build
+
 To install all the dependencies:
 
-```
+```bash
+  $ yarn
+
+  // or
+
   $ npm install
 ```
 
-*(after all the dependencies are installed)*
+To re-build the solution:
 
-To build the solution:
-
-```
-  $ make
-
-  //or
+```bash
   $ npm run build
 ```
 
-To run the `dev` environment:
+## Under the hood
 
-```
-  $ npm start
-```
+- compile the JS files using [webpack 3.x](https://webpack.github.io/) and [babel](https://babeljs.io)
+- check the syntax of the JS, according to [StandardJS](http://standardjs.com/) (via [ESLint](http://eslint.org/))
+- compress the CSS files using [CleanCss](https://github.com/jakubpawlowicz/clean-css)
+- compress html (via [HTMLMinifier](https://github.com/kangax/html-minifier))
