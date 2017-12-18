@@ -4,7 +4,9 @@ const eventsMap = {
 }
 
 function eventsPerDevice () {
-  return typeof window.orientation !== 'undefined' ? eventsMap.mobile : eventsMap.desktop
+  return typeof window.orientation !== 'undefined'
+    ? eventsMap.mobile
+    : eventsMap.desktop
 }
 
 function moveImg (evt) {
@@ -22,13 +24,15 @@ function moveImg (evt) {
 function imagePosition () {
   const events = eventsPerDevice()
   const img = document.querySelector('.zoom__box')
-  img[events.start] = e => {
+  img.addEventListener(events.start, e => {
     e.preventDefault()
     if (e.target.nodeName !== 'IMG') return
 
-    document[events.end] = () => { document[events.move] = null }
-    document[events.move] = moveImg(e)
-  }
+    document.addEventListener(events.end, () => {
+      document.removeEventListener(events.move, moveImg(e))
+    })
+    document.addEventListener(events.move, moveImg(e))
+  })
 }
 
 export default imagePosition

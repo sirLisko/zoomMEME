@@ -1,5 +1,7 @@
 # ZoomMEME 👀
 
+[![CircleCI](https://circleci.com/gh/sirLisko/zoomMEME.svg?style=svg)](https://circleci.com/gh/sirLisko/zoomMEME) [![codecov](https://codecov.io/gh/sirLisko/zoomMEME/branch/master/graph/badge.svg)](https://codecov.io/gh/sirLisko/zoomMEME)
+
 > [https://zoomme.me](https://zoomme.me) - Super simple zoom meme generator.
 
 ![image](example.jpeg)
