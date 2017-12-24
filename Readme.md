@@ -13,7 +13,9 @@ To install all the dependencies:
 ```bash
   $ yarn
 
-  // or
+  // yarn is the suggested package manager
+  // otherwise you can still use npm 
+  // but you can find some issues with some package version
 
   $ npm install
 ```
@@ -28,5 +30,6 @@ To re-build the solution:
 
 - compile the JS files using [webpack 3.x](https://webpack.github.io/) and [babel](https://babeljs.io)
 - check the syntax of the JS, according to [StandardJS](http://standardjs.com/) (via [ESLint](http://eslint.org/))
-- compress the CSS files using [CleanCss](https://github.com/jakubpawlowicz/clean-css)
-- compress html (via [HTMLMinifier](https://github.com/kangax/html-minifier))
+- unit tests with [Jest](https://facebook.github.io/jest/)
+- code coverage with [codecov](https://codecov.io)
+- Continuous Integration via [Codeship](https://codeship.com)

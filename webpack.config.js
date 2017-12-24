@@ -1,6 +1,24 @@
+const path = require('path')
+
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 module.exports = {
+  entry: './src/js/main.js',
   devtool: 'source-map',
-  entry: './js/main.js',
+  devServer: {
+    contentBase: './dist'
+  },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new CopyWebpackPlugin([
+      { from: './src/css/style.css' }
+    ])
+  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -9,6 +27,7 @@ module.exports = {
     }]
   },
   output: {
-    filename: './dist/js/app.js'
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'dist')
   }
 }
