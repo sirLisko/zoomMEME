@@ -12,8 +12,8 @@ afterEach(() => {
 })
 
 test('mouse move', () => {
-  const mockMouseEnter = mockEvent('.zoom__box', 'onmousedown')
-  const mockMouseMove = mockEvent(document, 'onmousemove')
+  const mockMouseEnter = mockEvent('.zoom__box', 'mousedown')
+  const mockMouseMove = mockEvent(document, 'mousemove')
 
   imagePosition()
 
@@ -29,8 +29,8 @@ test('mouse move', () => {
 test('touch move', () => {
   window.orientation = 'landscape'
 
-  const mockTouchStart = mockEvent('.zoom__box', 'ontouchstart')
-  const mockTouchMove = mockEvent(document, 'ontouchmove')
+  const mockTouchStart = mockEvent('.zoom__box', 'touchstart')
+  const mockTouchMove = mockEvent(document, 'touchmove')
 
   imagePosition()
 
@@ -48,8 +48,8 @@ test('if element is not image is not moving', () => {
     <div class="zoom__box"></div>
   `
 
-  const mockTouchStart = mockEvent('.zoom__box', 'ontouchstart')
-  const mockTouchMove = mockEvent(document, 'ontouchmove')
+  const mockTouchStart = mockEvent('.zoom__box', 'touchstart')
+  const mockTouchMove = mockEvent(document, 'touchmove')
 
   imagePosition()
 

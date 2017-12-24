@@ -19,11 +19,11 @@ export default new Promise((resolve, reject) => {
     }
   }
 
-  holder.addEventListener('ondrop', e => {
+  holder.addEventListener('drop', e => {
     e.preventDefault()
     readfiles(e.dataTransfer.files)
   })
 
   holder.querySelector('input')
-    .addEventListener('onchange', e => readfiles(e.target.files))
+    .addEventListener('change', e => readfiles(e.target.files))
 })

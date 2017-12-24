@@ -1,6 +1,6 @@
 const eventsMap = {
-  desktop: { start: 'onmousedown', move: 'onmousemove', end: 'onmouseup' },
-  mobile: { start: 'ontouchstart', move: 'ontouchmove', end: 'ontouchend' }
+  desktop: { start: 'mousedown', move: 'mousemove', end: 'mouseup' },
+  mobile: { start: 'touchstart', move: 'touchmove', end: 'touchend' }
 }
 
 function eventsPerDevice () {
@@ -28,10 +28,11 @@ function imagePosition () {
     e.preventDefault()
     if (e.target.nodeName !== 'IMG') return
 
-    document.addEventListener(events.end, () => {
-      document.removeEventListener(events.move, moveImg(e))
-    })
-    document.addEventListener(events.move, moveImg(e))
+    const moveImage = moveImg(e)
+
+    document.addEventListener(events.end, () =>
+      document.removeEventListener(events.move, moveImage))
+    document.addEventListener(events.move, moveImage)
   })
 }
 
