@@ -150,6 +150,7 @@ header p {
   outline: none;
 }
 .zoom__box img {
+  touch-action: none;
   cursor: move;
   width: 300px;
   user-drag: none;

@@ -11,13 +11,13 @@ function eventsPerDevice () {
 
 function moveImg (evt) {
   const target = evt.target
-  const diffX = evt.pageX - parseInt(target.style.marginLeft || 0, 10)
-  const diffY = evt.pageY - parseInt(target.style.marginTop || 0, 10)
+  const diffX = (evt.pageX || evt.touches[0].pageX) - parseInt(target.style.marginLeft || 0, 10)
+  const diffY = (evt.pageY || evt.touches[0].pageY) - parseInt(target.style.marginTop || 0, 10)
 
   return e => {
     e.preventDefault()
-    target.style.marginLeft = `${e.pageX - diffX}px`
-    target.style.marginTop = `${e.pageY - diffY}px`
+    target.style.marginLeft = `${(e.pageX || e.touches[0].pageX) - diffX}px`
+    target.style.marginTop = `${(e.pageY || e.touches[0].pageY) - diffY}px`
   }
 }
 
@@ -25,8 +25,8 @@ function imagePosition () {
   const events = eventsPerDevice()
   const img = document.querySelector('.zoom__box')
   img.addEventListener(events.start, e => {
-    e.preventDefault()
     if (e.target.nodeName !== 'IMG') return
+    e.preventDefault()
 
     const moveImage = moveImg(e)
 
