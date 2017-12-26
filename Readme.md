@@ -13,9 +13,7 @@ To install all the dependencies:
 ```bash
   $ yarn
 
-  // yarn is the suggested package manager
-  // otherwise you can still use npm 
-  // but you can find some issues with some package version
+  // or
 
   $ npm install
 ```
