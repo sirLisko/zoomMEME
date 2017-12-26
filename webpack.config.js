@@ -16,7 +16,9 @@ module.exports = {
       template: 'src/index.html'
     }),
     new CopyWebpackPlugin([
-      { from: './src/css/style.css' }
+      { from: './src/css/style.css' },
+      { from: './public' },
+      { from: './node_modules/sw-toolbox/sw-toolbox.js' }
     ])
   ],
   module: {
