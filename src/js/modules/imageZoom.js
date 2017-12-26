@@ -9,6 +9,7 @@ function imageZoom () {
     if (!e.target.classList.contains('zoom__ctrl')) {
       return
     }
+    e.preventDefault()
     const img = e.target.parentNode.querySelector('img')
     const width = img.offsetWidth
     img.style.width = `${width + inOrOut(e.target) * 50}px`
