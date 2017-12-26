@@ -31,3 +31,4 @@ To re-build the solution:
 - unit tests with [Jest](https://facebook.github.io/jest/)
 - code coverage with [codecov](https://codecov.io)
 - Continuous Integration via [Codeship](https://codeship.com)
+- service workers, pre-cache and offline via [sw-toolbox](https://googlechrome.github.io/sw-toolbox/)
