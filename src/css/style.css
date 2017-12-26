@@ -91,7 +91,7 @@ header p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 700px;
+  min-height: 500px;
 }
 @media (min-width: 500px) {
   .zoom {
