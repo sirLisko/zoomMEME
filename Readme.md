@@ -26,7 +26,7 @@ To re-build the solution:
 
 ## Under the hood
 
-- compile the JS files using [webpack 3.x](https://webpack.github.io/) and [babel](https://babeljs.io)
+- compile the JS files using [webpack 4.x](https://webpack.github.io/) and [babel](https://babeljs.io)
 - check the syntax of the JS, according to [StandardJS](http://standardjs.com/) (via [ESLint](http://eslint.org/))
 - unit tests with [Jest](https://facebook.github.io/jest/)
 - code coverage with [codecov](https://codecov.io)
