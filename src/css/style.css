@@ -1,6 +1,9 @@
 /* Reset */
-* { box-sizing: border-box }
-body, ul {
+* {
+  box-sizing: border-box;
+}
+body,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -20,8 +23,8 @@ li {
 }
 
 body {
-  background-color: #052F5F;
-  color: #F1A208;
+  background-color: #052f5f;
+  color: #f1a208;
   display: flex;
   flex-direction: column;
   font-family: 'Comfortaa', cursive;
@@ -62,7 +65,7 @@ header p {
 }
 .dropper label {
   align-items: center;
-  border: 5px dashed #06A77D;
+  border: 5px dashed #06a77d;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -103,7 +106,7 @@ header p {
 
 .zoom__ctrl {
   cursor: pointer;
-  color: #06A77D;
+  color: #06a77d;
   font-size: 4rem;
   text-align: center;
   width: 3rem;
@@ -163,10 +166,10 @@ header p {
 }
 
 .zoom__save {
-  background-color: #06A77D;
+  background-color: #06a77d;
   border: none;
   border-radius: 5px;
-  color: #052F5F;
+  color: #052f5f;
   cursor: pointer;
   font-family: 'verdana';
   font-size: 1rem;
@@ -174,13 +177,13 @@ header p {
   padding: 1rem;
 }
 .zoom__save:hover {
-  background-color: #F1A208;
-  color: #052F5F;
+  background-color: #f1a208;
+  color: #052f5f;
 }
 
 footer {
-	background-color: #005377;
-	font-size: 0.75rem;
+  background-color: #005377;
+  font-size: 0.75rem;
   padding: 0 1rem;
   width: 100%;
 }
@@ -190,17 +193,17 @@ footer {
     position: fixed;
   }
 }
-footer	p {
-	line-height: 1.5;
-	text-align: center;
+footer p {
+  line-height: 1.5;
+  text-align: center;
 }
 footer a {
-	color: #D5C67A;
-	text-decoration: none;
+  color: #d5c67a;
+  text-decoration: none;
 }
 footer a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 footer span {
-	white-space: nowrap;
+  white-space: nowrap;
 }

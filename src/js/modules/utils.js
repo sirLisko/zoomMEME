@@ -1,16 +1,15 @@
-export default function (selector, event) {
+export default function(selector, event) {
   let mock = {
     selector,
-    event
-  }
+    event,
+  };
 
-  const sel = selector === document
-    ? document
-    : document.querySelector(selector)
+  const sel =
+    selector === document ? document : document.querySelector(selector);
 
   sel.addEventListener = (evt, cb) => {
-    mock.cb = cb
-  }
+    mock.cb = cb;
+  };
 
-  return mock
+  return mock;
 }

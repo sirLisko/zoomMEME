@@ -1,12 +1,12 @@
-import errorHandler from './errorHandler'
+import errorHandler from './errorHandler';
 
 beforeEach(() => {
-  document.body.innerHTML = '<article></article'
-})
+  document.body.innerHTML = '<article></article';
+});
 
 test('errorHandler shows the message', () => {
-  errorHandler('foo')
+  errorHandler('foo');
 
-  const errorLabel = document.querySelector('.error')
-  expect(errorLabel.innerText).toBe('An error occur foo')
-})
+  const errorLabel = document.querySelector('.error');
+  expect(errorLabel.innerText).toBe('An error occur foo');
+});

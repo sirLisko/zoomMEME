@@ -1,16 +1,16 @@
-import imageRender from './imageRender'
+import imageRender from './imageRender';
 
-const readAsDataURL = jest.fn()
+const readAsDataURL = jest.fn();
 
 window.FileReader = jest.fn(() => ({
-  readAsDataURL
-}))
+  readAsDataURL,
+}));
 
-test('should read the file', (done) => {
-  imageRender(['foo'])
+test('should read the file', done => {
+  imageRender(['foo']);
 
   setTimeout(() => {
-    expect(readAsDataURL).toHaveBeenCalledWith('foo')
-    done()
-  }, 0)
-})
+    expect(readAsDataURL).toHaveBeenCalledWith('foo');
+    done();
+  }, 0);
+});

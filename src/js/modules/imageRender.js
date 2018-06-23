@@ -1,16 +1,16 @@
-function renderImage ([file]) {
-  const reader = new FileReader()
+function renderImage([file]) {
+  const reader = new FileReader();
 
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     reader.onload = event => {
-      const image = new Image()
-      image.src = event.target.result
+      const image = new Image();
+      image.src = event.target.result;
 
-      resolve(image)
-    }
+      resolve(image);
+    };
 
-    reader.readAsDataURL(file)
-  })
+    reader.readAsDataURL(file);
+  });
 }
 
-export default renderImage
+export default renderImage;
