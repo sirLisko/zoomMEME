@@ -32,10 +32,10 @@ describe('file input', () => {
     imageLoader
       .then(done)
       .catch((error) => {
-        expect(error).toBe('Format not supported.')
+        expect(error).toEqual(expect.any(Error))
+        expect(error.message).toBe('Format not supported.')
         done()
       })
-
     mockInput.cb({target: {files: [{ type: 'text' }]}})
   })
 })
@@ -61,7 +61,8 @@ describe('file drop', () => {
     imageLoader
       .then(done)
       .catch((error) => {
-        expect(error).toBe('Format not supported.')
+        expect(error).toEqual(expect.any(Error))
+        expect(error.message).toBe('Format not supported.')
         done()
       })
 
@@ -70,6 +71,7 @@ describe('file drop', () => {
 })
 
 test('disable holder dragover and dragend', () => {
+  // eslint-disable-next-line no-unused-expressions
   require('./imageLoader').default
 
   const holder = document.querySelector('#holder')

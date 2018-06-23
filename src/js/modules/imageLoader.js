@@ -15,7 +15,7 @@ export default new Promise((resolve, reject) => {
       resolve(images)
       document.querySelector('.dropper').setAttribute('hidden', 'hidden')
     } else {
-      reject('Format not supported.')
+      reject(new Error('Format not supported.'))
     }
   }
 
