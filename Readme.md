@@ -11,10 +11,6 @@
 To install all the dependencies:
 
 ```bash
-  $ yarn
-
-  // or
-
   $ npm install
 ```
 
