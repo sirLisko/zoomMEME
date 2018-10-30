@@ -20,7 +20,7 @@ test('should create the appropriate DataUrl image', done => {
 
   setTimeout(() => {
     save = document.querySelector('.zoom__save');
-    expect(save.href).toBe('foo');
+    expect(save.href).toContain('foo');
     expect(save.download).toBe('zoommeme');
 
     done();
