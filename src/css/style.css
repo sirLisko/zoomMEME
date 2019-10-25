@@ -173,12 +173,16 @@ header p {
   cursor: pointer;
   font-family: 'verdana';
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
 }
 .zoom__save:hover {
   background-color: #f1a208;
   color: #052f5f;
+}
+
+.zoom__checkbox {
+  margin-top: 1rem;
 }
 
 footer {
