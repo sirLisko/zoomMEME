@@ -9,6 +9,7 @@ beforeEach(() => {
   document.body.innerHTML = `
     <div class="zoom__box"></div>
     <a class="zoom__save"></a>
+    <label class="zoom__checkbox"><input type="checkbox" name="watermark" id="watermark"></label>
   `;
 });
 
