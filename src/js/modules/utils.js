@@ -1,5 +1,5 @@
-export default function(selector, event) {
-  let mock = {
+export default function (selector, event) {
+  const mock = {
     selector,
     event,
   };

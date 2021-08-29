@@ -1,7 +1,7 @@
-import fakeEvent from 'simulant';
-import imageZoo from './imageZoom';
+import fakeEvent from "simulant";
+import imageZoo from "./imageZoom";
 
-test('zoom_in', () => {
+test("zoom_in", () => {
   document.body.innerHTML = `
     <div class="zoom__box">
       <img offsetWidth="10" style="width: 10px">
@@ -12,14 +12,14 @@ test('zoom_in', () => {
 
   imageZoo();
 
-  const zoomCtrlIn = document.querySelector('.zoom__ctrl--in');
-  const image = document.querySelector('img');
+  const zoomCtrlIn = document.querySelector(".zoom__ctrl--in");
+  const image = document.querySelector("img");
 
-  expect(image.style.width).toBe('10px');
+  expect(image.style.width).toBe("10px");
 
-  fakeEvent.fire(zoomCtrlIn, 'click');
-  expect(image.style.width).toBe('50px');
+  fakeEvent.fire(zoomCtrlIn, "click");
+  expect(image.style.width).toBe("50px");
 
-  fakeEvent.fire(zoomCtrlIn, 'click');
-  expect(image.style.width).toBe('50px');
+  fakeEvent.fire(zoomCtrlIn, "click");
+  expect(image.style.width).toBe("50px");
 });

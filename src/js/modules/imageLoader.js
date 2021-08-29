@@ -1,10 +1,10 @@
-const holder = document.getElementById('holder');
+const holder = document.getElementById("holder");
 
 holder.ondragover = () => false;
 holder.ondragend = () => false;
 
 function checkFiles(files) {
-  return Array.from(files).filter(file => /image/.exec(file.type));
+  return Array.from(files).filter((file) => /image/.exec(file.type));
 }
 
 export default new Promise((resolve, reject) => {
@@ -13,18 +13,18 @@ export default new Promise((resolve, reject) => {
 
     if (images.length) {
       resolve(images);
-      document.querySelector('.dropper').setAttribute('hidden', 'hidden');
+      document.querySelector(".dropper").setAttribute("hidden", "hidden");
     } else {
-      reject(new Error('Format not supported.'));
+      reject(new Error("Format not supported."));
     }
   }
 
-  holder.addEventListener('drop', e => {
+  holder.addEventListener("drop", (e) => {
     e.preventDefault();
     readfiles(e.dataTransfer.files);
   });
 
   holder
-    .querySelector('input')
-    .addEventListener('change', e => readfiles(e.target.files));
+    .querySelector("input")
+    .addEventListener("change", (e) => readfiles(e.target.files));
 });

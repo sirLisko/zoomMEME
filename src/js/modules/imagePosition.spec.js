@@ -1,5 +1,5 @@
-import mockEvent from './utils';
-import imagePosition from './imagePosition';
+import mockEvent from "./utils";
+import imagePosition from "./imagePosition";
 
 beforeEach(() => {
   document.body.innerHTML = `
@@ -8,16 +8,16 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  document.body.innerHTML = '';
+  document.body.innerHTML = "";
 });
 
-test('mouse move', () => {
-  const mockMouseEnter = mockEvent('.zoom__box', 'mousedown');
-  const mockMouseMove = mockEvent(document, 'mousemove');
+test("mouse move", () => {
+  const mockMouseEnter = mockEvent(".zoom__box", "mousedown");
+  const mockMouseMove = mockEvent(document, "mousemove");
 
   imagePosition();
 
-  const image = document.querySelector('img');
+  const image = document.querySelector("img");
 
   mockMouseEnter.cb({
     preventDefault: () => {},
@@ -27,19 +27,19 @@ test('mouse move', () => {
   });
   mockMouseMove.cb({ preventDefault: () => {}, pageX: 100, pageY: 50 });
 
-  expect(image.style.marginLeft).toBe('90px');
-  expect(image.style.marginTop).toBe('40px');
+  expect(image.style.marginLeft).toBe("90px");
+  expect(image.style.marginTop).toBe("40px");
 });
 
-test('touch move', () => {
-  window.orientation = 'landscape';
+test("touch move", () => {
+  window.orientation = "landscape";
 
-  const mockTouchStart = mockEvent('.zoom__box', 'touchstart');
-  const mockTouchMove = mockEvent(document, 'touchmove');
+  const mockTouchStart = mockEvent(".zoom__box", "touchstart");
+  const mockTouchMove = mockEvent(document, "touchmove");
 
   imagePosition();
 
-  const image = document.querySelector('img');
+  const image = document.querySelector("img");
 
   mockTouchStart.cb({
     preventDefault: () => {},
@@ -49,21 +49,21 @@ test('touch move', () => {
   });
   mockTouchMove.cb({ preventDefault: () => {}, pageX: 100, pageY: 50 });
 
-  expect(image.style.marginLeft).toBe('90px');
-  expect(image.style.marginTop).toBe('40px');
+  expect(image.style.marginLeft).toBe("90px");
+  expect(image.style.marginTop).toBe("40px");
 });
 
-test('if element is not image is not moving', () => {
+test("if element is not image is not moving", () => {
   document.body.innerHTML = `
     <div class="zoom__box"></div>
   `;
 
-  const mockTouchStart = mockEvent('.zoom__box', 'touchstart');
-  const mockTouchMove = mockEvent(document, 'touchmove');
+  const mockTouchStart = mockEvent(".zoom__box", "touchstart");
+  const mockTouchMove = mockEvent(document, "touchmove");
 
   imagePosition();
 
-  const noImage = document.querySelector('div');
+  const noImage = document.querySelector("div");
 
   mockTouchStart.cb({
     preventDefault: () => {},
@@ -71,5 +71,5 @@ test('if element is not image is not moving', () => {
     pageX: 10,
     pageY: 10,
   });
-  expect(mockTouchMove.cb).not.toBe('function');
+  expect(mockTouchMove.cb).not.toBe("function");
 });

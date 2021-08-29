@@ -1,4 +1,4 @@
-import mockEvent from './utils';
+import mockEvent from "./utils";
 
 beforeEach(() => {
   jest.resetModules();
@@ -11,41 +11,41 @@ beforeEach(() => {
   `;
 });
 
-describe('file input', () => {
-  test('read files and filter images', done => {
-    const mockInput = mockEvent('input', 'onchange');
-    const imageLoader = require('./imageLoader').default;
+describe("file input", () => {
+  test("read files and filter images", (done) => {
+    const mockInput = mockEvent("input", "onchange");
+    const imageLoader = require("./imageLoader").default;
 
     imageLoader
-      .then(image => {
+      .then((image) => {
         expect(image).toBeTruthy();
         done();
       })
       .catch(done);
 
-    mockInput.cb({ target: { files: [{ type: 'image' }] } });
+    mockInput.cb({ target: { files: [{ type: "image" }] } });
   });
 
-  test('read files and rise an error if not images', done => {
-    const mockInput = mockEvent('input', 'onchange');
-    const imageLoader = require('./imageLoader').default;
+  test("read files and rise an error if not images", (done) => {
+    const mockInput = mockEvent("input", "onchange");
+    const imageLoader = require("./imageLoader").default;
 
-    imageLoader.then(done).catch(error => {
+    imageLoader.then(done).catch((error) => {
       expect(error).toEqual(expect.any(Error));
-      expect(error.message).toBe('Format not supported.');
+      expect(error.message).toBe("Format not supported.");
       done();
     });
-    mockInput.cb({ target: { files: [{ type: 'text' }] } });
+    mockInput.cb({ target: { files: [{ type: "text" }] } });
   });
 });
 
-describe('file drop', () => {
-  test('read files and filter images', done => {
-    const mockDrop = mockEvent('#holder', 'ondrop');
-    const imageLoader = require('./imageLoader').default;
+describe("file drop", () => {
+  test("read files and filter images", (done) => {
+    const mockDrop = mockEvent("#holder", "ondrop");
+    const imageLoader = require("./imageLoader").default;
 
     imageLoader
-      .then(image => {
+      .then((image) => {
         expect(image).toBeTruthy();
         done();
       })
@@ -53,32 +53,32 @@ describe('file drop', () => {
 
     mockDrop.cb({
       preventDefault: () => {},
-      dataTransfer: { files: [{ type: 'image' }] },
+      dataTransfer: { files: [{ type: "image" }] },
     });
   });
 
-  test('read files and rise an error if not images', done => {
-    const mockDrop = mockEvent('#holder', 'ondrop');
-    const imageLoader = require('./imageLoader').default;
+  test("read files and rise an error if not images", (done) => {
+    const mockDrop = mockEvent("#holder", "ondrop");
+    const imageLoader = require("./imageLoader").default;
 
-    imageLoader.then(done).catch(error => {
+    imageLoader.then(done).catch((error) => {
       expect(error).toEqual(expect.any(Error));
-      expect(error.message).toBe('Format not supported.');
+      expect(error.message).toBe("Format not supported.");
       done();
     });
 
     mockDrop.cb({
       preventDefault: () => {},
-      dataTransfer: { files: [{ type: 'text' }] },
+      dataTransfer: { files: [{ type: "text" }] },
     });
   });
 });
 
-test('disable holder dragover and dragend', () => {
+test("disable holder dragover and dragend", () => {
   // eslint-disable-next-line no-unused-expressions
-  require('./imageLoader').default;
+  require("./imageLoader").default;
 
-  const holder = document.querySelector('#holder');
+  const holder = document.querySelector("#holder");
   expect(holder.ondragover()).toBeFalsy();
   expect(holder.ondragend()).toBeFalsy();
 });
