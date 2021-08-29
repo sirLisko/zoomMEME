@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/sirLisko/zoomeme#readme",
   "dependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "html-minifier": "^4.0.0",
