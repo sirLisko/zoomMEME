@@ -1,8 +1,8 @@
 function renderImage([file]) {
   const reader = new FileReader();
 
-  return new Promise(resolve => {
-    reader.onload = event => {
+  return new Promise((resolve) => {
+    reader.onload = (event) => {
       const image = new Image();
       image.src = event.target.result;
 
