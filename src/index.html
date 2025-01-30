@@ -1,113 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <title>ZoomMEME</title>
-    <meta name="author" content="Luca Lischetti" />
-    <link
-      type="text/plain"
-      rel="author"
-      href="https://sirlisko.com/humans.txt"
-    />
-    <meta name="keywords" content="zoom, zoom-in, meme, generator" />
-    <meta name="description" content="Super simple zoom-in meme generator." />
 
-    <meta property="og:url" content="https://zoomme.me" />
-    <meta
-      property="og:description"
-      content="Super simple zoom-in meme generator."
-    />
-    <meta property="og:title" content="ZoomMEME" />
-    <meta property="og:image" content="https://zoomme.me/icon.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>ZoomMEME</title>
+  <meta name="author" content="Luca Lischetti" />
+  <link type="text/plain" rel="author" href="https://sirlisko.com/humans.txt" />
+  <meta name="keywords" content="zoom, zoom-in, meme, generator" />
+  <meta name="description" content="Super simple zoom-in meme generator." />
+  <link rel="canonical" href="https://zoomme.me/">
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Comfortaa:400|Chango"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link href="style.css" rel="stylesheet" />
+  <meta property="og:url" content="https://zoomme.me" />
+  <meta property="og:description" content="Super simple zoom-in meme generator." />
+  <meta property="og:title" content="ZoomMEME" />
+  <meta property="og:image" content="https://zoomme.me/icon.png" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/apple-touch-icon-60x60.png"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#052f5f" />
-    <meta name="theme-color" content="#052f5f" />
-  </head>
-  <body>
-    <header>
-      <h1>ZoomME.ME</h1>
-      <p>Super simple zoom-in meme generator.</p>
-    </header>
-    <div class="dropper">
-      <label id="holder">
-        <span>Click here</span>
-        <span>or</span>
-        <span>Drop an Image!</span>
-        <input type="file" />
-      </label>
-    </div>
-    <article class="zoom" hidden>
-      <ul class="zoom__box">
-        <li>
-          <div class="zoom__ctrl zoom__ctrl--out">-</div>
-          <p></p>
-          <div class="zoom__ctrl zoom__ctrl--in">+</div>
-        </li>
-        <li>
-          <div class="zoom__ctrl zoom__ctrl--out">-</div>
-          <p></p>
-          <div class="zoom__ctrl zoom__ctrl--in">+</div>
-        </li>
-        <li>
-          <div class="zoom__ctrl zoom__ctrl--out">-</div>
-          <p></p>
-          <div class="zoom__ctrl zoom__ctrl--in">+</div>
-        </li>
-        <li>
-          <div class="zoom__ctrl zoom__ctrl--out">-</div>
-          <p></p>
-          <div class="zoom__ctrl zoom__ctrl--in">+</div>
-        </li>
-      </ul>
-      <label class="zoom__checkbox"
-        ><input type="checkbox" name="watermark" id="watermark" checked />Allow
-        watermark on generated image</label
-      >
-      <a class="zoom__save">Save Image</a>
-    </article>
-    <footer>
-      <p>
-        <span
-          >Created with ♥ by
-          <a href="https://sirlisko.com">Luca Lischetti</a> (<a
-            href="https://twitter.com/sirLisko"
-            >@sirLisko</a
-          >).</span
-        >
-        <span
-          >Inspired by
-          <a href="https://twitter.com/GianlucaMezzo">GianlucaMezzo</a>
-          :-)</span
-        >
-        <span
-          >View project source on
-          <a href="https://github.com/sirLisko/zoommeme">Github</a>.</span
-        >
-      </p>
-    </footer>
-    <script>
-      'serviceWorker' in navigator &&
-        navigator.serviceWorker.register('/sw.js');
-    </script>
-  </body>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Chango" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#052f5f" />
+  <meta name="theme-color" content="#052f5f" />
+</head>
+
+<body>
+  <header>
+    <h1>ZoomME.ME</h1>
+    <p>Super simple zoom-in meme generator.</p>
+  </header>
+  <div class="dropper">
+    <label id="holder">
+      <span>Click here</span>
+      <span>or</span>
+      <span>Drop an Image!</span>
+      <input type="file" />
+    </label>
+  </div>
+  <article class="zoom" hidden>
+    <ul class="zoom__box">
+      <li>
+        <div class="zoom__ctrl zoom__ctrl--out">-</div>
+        <p></p>
+        <div class="zoom__ctrl zoom__ctrl--in">+</div>
+      </li>
+      <li>
+        <div class="zoom__ctrl zoom__ctrl--out">-</div>
+        <p></p>
+        <div class="zoom__ctrl zoom__ctrl--in">+</div>
+      </li>
+      <li>
+        <div class="zoom__ctrl zoom__ctrl--out">-</div>
+        <p></p>
+        <div class="zoom__ctrl zoom__ctrl--in">+</div>
+      </li>
+      <li>
+        <div class="zoom__ctrl zoom__ctrl--out">-</div>
+        <p></p>
+        <div class="zoom__ctrl zoom__ctrl--in">+</div>
+      </li>
+    </ul>
+    <label class="zoom__checkbox"><input type="checkbox" name="watermark" id="watermark" checked />Allow
+      watermark on generated image</label>
+    <a class="zoom__save">Save Image</a>
+  </article>
+  <footer>
+    <p>
+      <span>Created with ♥ by
+        <a href="https://sirlisko.com">Luca Lischetti</a> (<a href="https://twitter.com/sirLisko">@sirLisko</a>).</span>
+      <span>Inspired by
+        <a href="https://twitter.com/GianlucaMezzo">GianlucaMezzo</a>
+        :-)</span>
+      <span>View project source on
+        <a href="https://github.com/sirLisko/zoommeme">Github</a>.</span>
+    </p>
+  </footer>
+  <script>
+    'serviceWorker' in navigator &&
+      navigator.serviceWorker.register('/sw.js');
+  </script>
+</body>
+
 </html>
